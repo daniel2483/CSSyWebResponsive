@@ -1,0 +1,160 @@
+body{
+  font-family: 'Dancing Script', cursive;
+  animation-name: AnimacionCargaPagina;
+  animation-duration: 0.5s;
+}
+
+header {
+  background: #5b7989;
+  padding: 15px 15px 15px 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+h1{
+  text-align: left;
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  -webkit-text-shadow: 2px 2px #02010a;
+}
+
+#titulo{
+  width:50%;
+}
+
+#menu{
+  width:50%;
+  display:none;
+  text-align: right;
+  color: white;
+}
+
+a[href=".\/index.html"] {
+  text-decoration: none;
+}
+
+a[href="../src/paisajes.html"] {
+  text-decoration: none;
+}
+
+a[href="../src/retratos.html"] {
+  text-decoration: none;
+}
+
+a{
+  color:inherit;
+  font-weight: bold;
+}
+
+a:visited{
+  color:white;
+}
+
+.contenedor {
+display: flex;
+flex-direction: column;
+}
+
+
+
+footer{
+  border-top: 3px grey solid;
+  margin: 5% 5% 5% 5%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+@-webkit-keyframes AnimacionCargaPagina{
+  0%{
+    margin-top: 150%;
+  };
+  60%{
+    margin-top: -5%;
+  };
+  100%{
+    margin-top: 0%;
+  };
+}
+
+#section1{
+  background: #82c3a6;
+  padding-bottom: 40px;
+}
+
+#section2{
+  background: #d5c75f;
+  padding-bottom: 40px;
+}
+
+#imagen1{
+
+  padding-top: 5%;
+}
+
+#imagen1 img{
+  margin:auto;
+  display: block;
+  width: 30%;
+}
+
+#imagen2 img{
+  width: 350px;
+  margin:auto;
+  display: block;
+}
+
+#imagen3 img{
+  margin:auto;
+  display: block;
+  width: 350px;
+}
+
+#imagen2{
+  width:100%;
+}
+
+#imagen3{
+  width:100%;
+}
+
+img{
+  box-shadow: 2px 2px  #02010a;
+}
+
+#section2{
+  padding: 5% 0 5% 0;
+}
+
+#section1{
+  display: flex;
+  flex-direction: column;
+}
+
+#destacados .contenedor > div {
+  text-align: center;
+  width: 50%;
+}
+
+@media (min-width:800px){
+
+  #menu{
+    display: block;
+
+  }
+
+  #imagen2{
+    width:100%;
+
+  }
+
+  #imagen3{
+    width:100%;
+  }
+
+  .contenedor {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  }
+}
