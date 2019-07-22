@@ -2,6 +2,12 @@ body{
   font-family: 'Dancing Script', cursive;
   animation-name: AnimacionCargaPagina;
   animation-duration: 0.5s;
+  background: black;
+}
+
+#Principal{
+  width:100%;
+  background: black;
 }
 
 header {
@@ -23,7 +29,7 @@ a[href="../src/retratos.html"] {
   text-decoration: none;
 }
 
-a{
+header a{
   color:inherit;
   font-weight: bold;
   font-size: 20px;
@@ -52,6 +58,27 @@ footer{
   border-radius: 0px 0px 10px 10px
 }
 
+footer #redes a{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: normal;
+  color:black;
+}
+
+footer #redes a::after:visited{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: normal;
+  color:black;
+}
+
+footer p{
+  text-align: justify;
+  padding-left: 30%;
+  padding-right: 30%;
+}
 
 #titulo{
   width:100%;
@@ -80,38 +107,38 @@ footer{
 #imagen1 img{
   margin:auto;
   display: block;
-  width: 30%;
+  width: 90%;
 }
 
-#imagen2{
-
-}
-
-#imagen2 img{
-  width: 450px;
+#imagen2 img,#imagen3 img{
+  width: 90%;
   margin:auto;
   display: block;
   border: 1px solid;
 
 }
 
-#imagen3 img{
-  margin:auto;
-  display: block;
-  width: 450px;
-  border: 1px solid;
-}
-
-#imagen2{
+#imagen2,#imagen3{
   width:100%;
   text-decoration: underline;
   font-size: 20px;
+  text-align: center;
 }
 
-#imagen3{
-  width:100%;
-  text-decoration: underline;
-  font-size: 20px;
+#imagen2 img:hover{
+  animation-name: InclinacionImagenForward;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+#imagen3 img:hover{
+  animation-name: MoverImagenForward;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+img[src$=".png"]{
+  width:20px
 }
 
 img{
@@ -133,23 +160,22 @@ img{
   width: 50%;
 }
 
-#contacto{
+#contacto,#terminos,#redes,#derechos{
   width:100%;
 }
 
-#terminos{
-  width:100%;
+#contacto h1,#terminos h1,#redes h1,#derechos h1{
+  text-align: center;
 }
 
-#redes{
-  width:100%;
-}
 
-#derechos{
-  width:100%;
-}
+@media (min-width:900px){
+  #Principal{
+    width:900px;
+    margin-left: 20%;
+    background: black;
+  }
 
-@media (min-width:800px){
   h1{
     text-align: left;
   }
@@ -164,30 +190,23 @@ img{
     width:50%;
   }
 
-  #imagen2{
+  #imagen2,#imagen3{
     width:50%;
     text-align: center
   }
 
-  #imagen3{
-    width:50%;
-    text-align: center;
-  }
-
-  #contacto{
+  #contacto,#terminos,#redes,#derechos{
     width:25%;
   }
 
-  #terminos{
-    width:25%;
+  footer p{
+    text-align: justify;
+    padding-left: 21%;
+    padding-right: 21%;
   }
 
-  #redes{
-    width:25%;
-  }
-
-  #derechos{
-    width:25%;
+  footer a::after[content="facebook"]{
+    content: "<br>";
   }
 
   .contenedor {
@@ -195,19 +214,9 @@ img{
   flex-direction: row;
   text-align: center;
   }
+
 }
 
-#imagen2 img:hover{
-  animation-name: InclinacionImagenForward;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-#imagen3 img:hover{
-  animation-name: MoverImagenForward;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
 
 @-webkit-keyframes AnimacionCargaPagina{
   0%{
